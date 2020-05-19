@@ -1,0 +1,24 @@
+server:
+  port: 10010
+spring:
+  application:
+    name: api-gateway #服务id  唯一
+
+
+zuul:  #或者全部配置 用默认配置  用service的applicationname 即可
+  routes:
+    service-provider: /provider/**
+  ignored-services:
+    - service-consumer #忽略服务 不进入网关
+  prefix: /api #前缀
+#    aaabbb:     #路由id  可以随便定义名字
+#      path: /aaa-provider/**  #定义的映射路径
+#      url: http://localhost:8082  #映射路径对应的实际url地址
+#    service-provider: #微服务的id
+#      path: /provider/**
+#      serviceId: service-providers
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka
+

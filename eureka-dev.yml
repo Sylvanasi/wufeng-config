@@ -1,0 +1,13 @@
+server:
+  port: 10086
+spring:
+  application:
+    name: wufeng-eureka  #微服务名称 要求唯一
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka
+  server:
+    eviction-interval-timer-in-ms: 5000
+    enable-self-preservation: false

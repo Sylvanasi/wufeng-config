@@ -1,0 +1,29 @@
+server:
+  port: 80
+spring:
+  application:
+    name: service-consumer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka
+    registry-fetch-interval-seconds: 5 #(默认30秒  以当前时间间隔去注册中心重新拉取服务)
+service-provider:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 5000
+feign:
+  hystrix:
+    enabled: true
+
+ribbon:
+  ConnectionTimeOut: 500     #配置超时连接  500毫秒未连接上就报超时
+  ReadTimeOut: 2000	 #配置的 2000毫秒未连接上就报超时
