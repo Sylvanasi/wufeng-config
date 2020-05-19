@@ -7,6 +7,10 @@ spring:
     password: root
   application:
     name: service-provider
+  redis:
+    host: 106.53.127.49
+    port: 6379
+
 mybatis:
   type-aliases-package: com.wufeng.pojo
 
