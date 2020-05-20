@@ -3,6 +3,12 @@ server:
 spring:
   application:
     name: service-consumer
+  rabbitmq:
+    host: 106.53.127.49
+    port: 5672
+    username: admin
+    password: admin
+    virtual-hots: /
 eureka:
   client:
     service-url:
