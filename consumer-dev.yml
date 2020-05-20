@@ -33,3 +33,9 @@ feign:
 ribbon:
   ConnectionTimeOut: 500     #配置超时连接  500毫秒未连接上就报超时
   ReadTimeOut: 2000	 #配置的 2000毫秒未连接上就报超时
+  
+#其他配置
+#定义交换机
+order:
+  fanout:
+    exchange: order.fanout.exchange
