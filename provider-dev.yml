@@ -27,3 +27,10 @@ eureka:
   instance:
     lease-expiration-duration-in-seconds: 10
     lease-renewal-interval-in-seconds: 5
+
+#其他配置
+#定义交换机
+order:
+  fanout:
+    exchange: order.fanout.exchange
+

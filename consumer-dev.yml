@@ -39,3 +39,8 @@ ribbon:
 order:
   fanout:
     exchange: order.fanout.exchange
+#定义队列
+    log:
+      queue: order.fanout.log.queue
+    email:
+      queue: order.fanout.email.queue
