@@ -1,5 +1,5 @@
 server:
-  port: 10084
+  port: 10086
 spring:
   application:
     name: wufeng-eureka  #微服务名称 要求唯一
