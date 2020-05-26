@@ -13,4 +13,4 @@ eureka:
     enable-self-preservation: false
 
 test:
-  bus: 11111
+  bus: 11111222
